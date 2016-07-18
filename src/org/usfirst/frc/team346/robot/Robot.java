@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 
 import org.usfirst.frc.team346.gearboxes.TwoMotorBox;
 import org.usfirst.frc.team346.human_input_devices.XBoxController;
+import org.usfirst.frc.team346.human_input_devices.XBoxController.XBoxAxis;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -45,8 +46,8 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-        leftDrive.set(-0.5*xBox.getLeftY());
-        rightDrive.set(0.5*xBox.getRightY());
+        leftDrive.set(-0.5*xBox.getAxis(XBoxAxis.LEFT_Y));
+        rightDrive.set(0.5*xBox.getAxis(XBoxAxis.RIGHT_Y));
     }
     
     /**
