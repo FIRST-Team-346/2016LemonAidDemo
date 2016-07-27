@@ -4,8 +4,8 @@ package org.usfirst.frc.team346.robot;
 import edu.wpi.first.wpilibj.IterativeRobot;
 
 import org.usfirst.frc.team346.gearboxes.TwoMotorBox;
-import org.usfirst.frc.team346.human_input_devices.XBoxController;
-import org.usfirst.frc.team346.human_input_devices.XBoxController.XBoxAxis;
+import org.usfirst.frc.team346.hid.XBoxController;
+import org.usfirst.frc.team346.hid.XBoxController.XBoxAxis;
 
 /**
  * The VM is configured to automatically run this class, and to call the

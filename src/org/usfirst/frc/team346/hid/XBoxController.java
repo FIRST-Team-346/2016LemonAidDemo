@@ -1,4 +1,4 @@
-package org.usfirst.frc.team346.human_input_devices;
+package org.usfirst.frc.team346.hid;
 
 import edu.wpi.first.wpilibj.Joystick;
 
@@ -163,5 +163,4 @@ public class XBoxController extends Joystick {
 		}
 		}
 	}
-
 }
