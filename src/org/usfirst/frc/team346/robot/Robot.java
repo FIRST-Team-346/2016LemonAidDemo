@@ -2,6 +2,7 @@
 package org.usfirst.frc.team346.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.Joystick;
 
 import org.usfirst.frc.team346.gearboxes.TwoMotorBox;
 import org.usfirst.frc.team346.hid.XBoxController;
@@ -15,8 +16,9 @@ import org.usfirst.frc.team346.hid.XBoxController.XBoxAxis;
  * directory.
  */
 public class Robot extends IterativeRobot {
-	// Joysticks
-	public XBoxController xBox;
+	// Joystick
+	public Joystick leftJoystick;
+	public Joystick rightJoystick;
 	
 	// Gear Boxes
 	public TwoMotorBox leftDrive;
@@ -28,7 +30,8 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
     	// Init Joystick
-    	xBox = new XBoxController(0);
+    	leftJoystick = new Joystick(0);
+    	rightJoystick = new Joystick(1);
     	
     	// Init Gear Boxes
     	leftDrive = new TwoMotorBox(0, 1);
@@ -46,8 +49,8 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-        leftDrive.set(-0.5*xBox.getAxis(XBoxAxis.LEFT_Y));
-        rightDrive.set(0.5*xBox.getAxis(XBoxAxis.RIGHT_Y));
+        leftDrive.set(leftJoystick.getY());
+        rightDrive.set(-rightJoystick.getY());
     }
     
     /**
