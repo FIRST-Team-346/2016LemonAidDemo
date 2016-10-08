@@ -49,8 +49,8 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-        leftDrive.set(leftJoystick.getY());
-        rightDrive.set(-rightJoystick.getY());
+        leftDrive.set(-1 * leftJoystick.getY());
+        rightDrive.set(rightJoystick.getY());
     }
     
     /**
